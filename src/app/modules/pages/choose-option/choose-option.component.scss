@@ -1,0 +1,20 @@
+.choose-page {
+  background-image: url("../../../../assets/images/background.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.card {
+  width: 60%;
+  border: 3px solid gray;
+  margin: 0;
+}
+
+mat-card {
+    text-align: center;
+}
