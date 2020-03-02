@@ -14,7 +14,6 @@ export class ChooseOptionComponent implements OnInit {
   }
 
   handleOptionChoose(opt: string) {
-    console.log(opt);
     this.optionService.handleOptionChoose(opt);
   }
 }
