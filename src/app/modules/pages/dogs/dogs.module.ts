@@ -8,6 +8,7 @@ import { DogsComponent } from './dogs.component';
   declarations: [DogsComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [DogsComponent]
 })
 export class DogsModule { }

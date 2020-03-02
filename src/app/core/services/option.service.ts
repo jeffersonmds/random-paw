@@ -24,7 +24,7 @@ export class OptionService {
     this.chosenOption = option;
     this.userChosenOption = true;
     this.optionEvents.emit(true);
-    this.router.navigate(['/']);
+    this.router.navigate(['/' + option]);
   }
 
   handleExit() {

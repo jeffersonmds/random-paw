@@ -8,6 +8,7 @@ import { CatsComponent } from './cats.component';
   declarations: [CatsComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [CatsComponent]
 })
 export class CatsModule { }
