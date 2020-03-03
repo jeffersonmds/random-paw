@@ -1,3 +1,23 @@
-img {
+button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    height: 70px;
+    width: 70px;
+}
+
+.material-icons {
+    font-size: 35px;
+}
+
+.mat-icon {
+    height: 35px;
+    width: 35px;
+}
+
+.page {
+    background-image: url("../../../../assets/images/cats_background.jpg");
+    background-size: cover;
     width: 100vw;
+    height: 100vh;
 }

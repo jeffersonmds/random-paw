@@ -12,6 +12,10 @@ export class DogsComponent implements OnInit {
   constructor(private dogService: DogService) { }
 
   ngOnInit(): void {
+    this.setPicture();
+  }
+
+  setPicture() {
     this.dogService.getRandom().subscribe(res => {
       if (res.status === 'success') {
         this.urlRandomPicture = res.message;

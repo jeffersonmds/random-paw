@@ -12,6 +12,10 @@ export class CatsComponent implements OnInit {
   constructor(private catService: CatService) { }
 
   ngOnInit(): void {
+    this.setPicture();
+  }
+
+  setPicture() {
     this.catService.getRandom().subscribe(res => {
       this.urlRandomPicture = res[0].url;
     });
