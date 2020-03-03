@@ -16,5 +16,17 @@
 }
 
 mat-card {
-    text-align: center;
+  text-align: center;
+}
+
+.dog {
+  background-image: url("../../../../assets/images/dog.png");
+  width: 120px;
+  height: 120px;
+}
+
+.cat {
+  background-image: url("../../../../assets/images/cat.png");
+  width: 120px;
+  height: 120px;
 }

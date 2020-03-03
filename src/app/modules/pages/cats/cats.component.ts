@@ -7,10 +7,13 @@ import { CatService } from 'src/app/core/services/cat.service';
   styleUrls: ['./cats.component.scss']
 })
 export class CatsComponent implements OnInit {
+  urlRandomPicture: string;
 
   constructor(private catService: CatService) { }
 
   ngOnInit(): void {
+    this.catService.getRandom().subscribe(res => {
+      this.urlRandomPicture = res[0].url;
+    });
   }
-
 }
