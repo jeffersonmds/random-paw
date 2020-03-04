@@ -53,14 +53,15 @@ export class OptionGuardService implements CanActivate {
     const hasChosenOption = this.optionService.hasChosenOption;
     const isOnlyNotLoggedIn = route.routeConfig.path === 'choose';
 
-    if (hasChosenOption) {
+    if (hasChosenOption && isOnlyNotLoggedIn) {
       this.router.navigate(['/']);
+      return false;
     }
 
-    if (!hasChosenOption || isOnlyNotLoggedIn) {
+    if (!hasChosenOption && !isOnlyNotLoggedIn) {
       this.router.navigate(['/choose']);
     }
 
-    return hasChosenOption || !isOnlyNotLoggedIn;
+    return hasChosenOption || isOnlyNotLoggedIn;
   }
 }
