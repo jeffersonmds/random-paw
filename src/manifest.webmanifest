@@ -1,8 +1,8 @@
 {
   "name": "random-paw",
   "short_name": "random-paw",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#E4EBBC",
+  "background_color": "#BCE4EA",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",

@@ -16,6 +16,7 @@ export class OptionService {
     this.userChosenOption = !!aux;
     if (this.hasChosenOption) {
       this.chosenOption = JSON.parse(aux);
+      this.router.navigate(['/' + aux]);
     }
   }
 
