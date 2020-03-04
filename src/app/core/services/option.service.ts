@@ -16,7 +16,6 @@ export class OptionService {
     this.userChosenOption = !!aux;
     if (this.hasChosenOption) {
       this.chosenOption = JSON.parse(aux);
-      this.router.navigate(['/' + aux]);
     }
   }
 
@@ -52,15 +51,16 @@ export class OptionGuardService implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
 
     const hasChosenOption = this.optionService.hasChosenOption;
+    const isOnlyNotLoggedIn = route.routeConfig.path === 'choose';
 
     if (hasChosenOption) {
-      this.router.navigate(['/' + this.optionService.getChosenOption]);
+      this.router.navigate(['/']);
     }
 
-    if (!hasChosenOption) {
+    if (!hasChosenOption || isOnlyNotLoggedIn) {
       this.router.navigate(['/choose']);
     }
 
-    return hasChosenOption;
+    return hasChosenOption || !isOnlyNotLoggedIn;
   }
 }
